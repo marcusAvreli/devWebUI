@@ -1,0 +1,20 @@
+.box {
+  position: relative;
+  width: 50px;
+  text-align: center;
+  display: inline-block;
+  border: 2px solid black;
+  padding: 2px 5px 2px 5px;
+}
+#container .box:not(:last-child) {
+  margin-right: 25px;
+}
+#container .box:not(:last-child):after {
+  position: absolute;
+  content: '';
+  right: -50%;
+  top: 0%;
+  width: 50%;
+  height: 50%;
+  border-bottom: 2px solid black;
+}

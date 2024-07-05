@@ -1,0 +1,70 @@
+
+/* No normal bullets please */
+ul {
+  list-style-type: none;
+ 
+}
+.form-wizard .form-wizard-steps {
+  margin: 20px 0;
+}
+.form-wizard .form-wizard-header {
+  text-align: center;
+}
+/* li element  default style*/
+[dir="ltr"].form-wizard .form-wizard-steps li {
+	width: 20%;
+	float: left; 
+	position: relative; 
+	display: inline-block;
+ 
+}
+/* li element  default style*/
+[dir="rtl"].form-wizard .form-wizard-steps li {
+	width: 20%;
+	float: right; 
+	position: relative; 
+	display: inline-block;
+ 
+}
+/* li element  inherits default style*/
+.form-wizard .form-wizard-steps li:after {
+ background-color: #f3f3f3;
+  content: "";
+  height: 5px;
+  left: 0%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+   width: 100%;
+  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid #dddddd;
+}
+/* style of circles */
+.form-wizard .form-wizard-steps li span {
+  background-color: #dddddd;
+  border-radius: 50%;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+  text-align: center;
+  width: 40px;
+  z-index: 1;
+}
+[dir="ltr"].form-wizard .form-wizard-steps li:last-child::after {
+  width: 50%;
+}
+
+[dir="rtl"].form-wizard .form-wizard-steps li:last-child::after {
+  width: 50%;
+}
+
+[dir="ltr"].form-wizard .form-wizard-steps li:not(:last-child):after {
+	left: 50%; 
+	width: 100%;
+}
+[dir="rtl"].form-wizard .form-wizard-steps li:not(:last-child):after {
+	right: 50%; 
+	width: 100%;
+}

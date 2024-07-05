@@ -1,0 +1,147 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+	   <link rel="stylesheet" href="index.css">
+	   <script src="index.js"></script>
+  </head>
+
+  <body>
+
+
+<a href="https://www.darins.page/articles/designing-a-reorderable-list-component" target="_blank" rel="noopener noreferrer"> <h1>"Re-orderable List" pattern</h1> </a>
+
+
+<p>My attempt to make a re-orderable list module that functions across platforms and devices while also being as accessible as possible for all users.</p>
+
+<section>
+	<h2 id="heading">Fruit Rankings</h2>	
+	<p>Rank the following fruits from best-to-worst. Use an item's up and down buttons to reorder. You can also drag-and-drop an item onto another to swap positions, or drop an item above or below another to shift them.</p>
+	<p>To reorder via text input, visit our <a href="#">classic interface</a>.</p>
+	<p><span class="bold">Keyboard instructions:</span> use the up and down arrow keys to navigate list items; use the left and right arrow keys to access an item's up and down buttons.</p>
+	
+	<form>
+	
+		<div  class="rankings">
+			<a href="#rankingsSkipEnd" class="skipLink" id="rankingsSkipStart">&darr; Jump to list end</a>
+			<ol>
+				<li aria-labelledby="marker1 name1" class="rankingsItemLowfi">
+					<div id="marker1" class="rankingsItem--marker">1.</div>
+					<div class="rankingsItem--inner">
+						<div id="name1" class="rankingsItem--text">Apple</div>
+						<img class="rankingsItem--photo" src="https://assets.codepen.io/128542/apple.png" width="72" height="72" alt="" />
+						<div class="rankingsItem--moveGroup">
+							<label for="move1">Move <span class="visuallyHidden">Apple </span> to:</label>
+							<input type="text" id="move1" inputmode="numeric" pattern="[0-9]*" autocomplete="off" />
+						</div>
+					</div>
+				</li>
+				<li aria-labelledby="marker2 name2" class="rankingsItemLowfi">
+					<div id="marker2" class="rankingsItem--marker">2.</div>
+					<div class="rankingsItem--inner">
+						<div id="name2" class="rankingsItem--text">Banana</div>
+						<img class="rankingsItem--photo" src="https://assets.codepen.io/128542/banana.png" width="96" height="auto" alt="" />
+						<div class="rankingsItem--moveGroup">
+							<label for="move2">Move <span class="visuallyHidden">Banana </span> to:</label>
+							<input type="text" id="move2" inputmode="numeric" pattern="[0-9]*" autocomplete="off" />
+						</div>
+					</div>
+				</li>
+				<li aria-labelledby="marker3 name3" class="rankingsItemLowfi">
+					<div id="marker3" class="rankingsItem--marker">3.</div>
+					<div class="rankingsItem--inner">
+						<div id="name3" class="rankingsItem--text">Cherry</div>
+						<img class="rankingsItem--photo" src="https://assets.codepen.io/128542/cherry.png" width="96" height="auto" alt="" />
+						<div class="rankingsItem--moveGroup">
+							<label for="move3">Move <span class="visuallyHidden">Cherry </span> to:</label>
+							<input type="text" id="move3" inputmode="numeric" pattern="[0-9]*" autocomplete="off" />
+						</div>
+					</div>
+				</li>
+				<li aria-labelledby="marker4 name4" inputmode="numeric" class="rankingsItemLowfi">
+					<div id="marker4" class="rankingsItem--marker">4.</div>
+					<div class="rankingsItem--inner">
+						<div id="name4" class="rankingsItem--text">Grape</div>
+						<img class="rankingsItem--photo" src="https://assets.codepen.io/128542/grape.png" width="96" height="auto" alt="" />
+						<div class="rankingsItem--moveGroup">
+							<label for="move4">Move <span class="visuallyHidden">Grape </span> to:</label>
+							<input type="text" id="move4" inputmode="numeric" pattern="[0-9]*" autocomplete="off" />
+						</div>
+					</div>
+				</li>
+				<li aria-labelledby="marker5 name5" class="rankingsItemLowfi">
+					<div id="marker5" class="rankingsItem--marker">5.</div>
+					<div class="rankingsItem--inner">
+						<div id="name5" class="rankingsItem--text">Orange</div>
+						<img class="rankingsItem--photo" src="https://assets.codepen.io/128542/orange.png" width="96" height="auto" alt="" />
+						<div class="rankingsItem--moveGroup">
+							<label for="move5">Move <span class="visuallyHidden">Orange </span> to:</label>
+							<input type="text" id="move5" inputmode="numeric" pattern="[0-9]*" autocomplete="off" />
+						</div>
+					</div>
+				</li>
+			</ol>
+			<a href="#rankingsSkipStart" class="skipLink" id="rankingsSkipEnd">&uarr; Jump to list start</a>
+
+			<div class="buttonRowRight">
+				<button id="updateBtn" class="button buttonSecondary" type="submit" name="update">Update List</button>
+			</div>
+		</div>
+		
+		<div class="buttonRowRight">
+			<button id="saveBtn" class="button buttonLarge" type="submit" name="save">Save &amp; Continue</button>
+		</div>
+		
+		<!-- 
+		### adjusted markup should look like this ###
+		
+		<div class="rankings">
+			<div role="application" aria-roledescription="Reorderable List widget" aria-labelledby="heading" aria-describedby="instructions">
+				<div role="list">
+					<div aria-labelledby="marker1 name1" role="listitem" class="rankingsItem">
+						<div id="marker1" class="rankingsItem--marker">1.</div>
+						<div class="rankingsItem--inner" draggable="true" data-name="Nikola Jokic" data-origin="1">
+							<div id="name1" class="rankingsItem--text">
+								<span>Nikola Jokic</span> 
+								<span>Denver Nuggets</span>
+							</div>
+							<img class="rankingsItem--photo" src="https://assets.codepen.io/128542/jokic.png" width="96" height="auto" alt="" />
+							<button class="rankingsItem--up" type="button">
+								<span class="visuallyHidden">Move up</span>
+								<svg width="16" height="16" focusable="false" aria-hidden="true">
+									<use xlink:href="#icon--up" />
+								</svg>                        
+							</button>
+							<button class="rankingsItem--down" type="button">
+								<span class="visuallyHidden">Move down</span>
+								<svg width="16" height="16" focusable="false" aria-hidden="true">
+									<use xlink:href="#icon--down" />
+								</svg> 
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="rankingsGaps" aria-hidden="true" tabindex="-1"></div>
+			</div>
+			<div class="rankingsEnd visuallyHidden">End of Reorderable List widget.</div>
+			<div class="rankingsStatus visuallyHidden" role="status" aria-live="assertive" aria-atomic="true"></div>
+		</div>
+		
+		-->
+		
+	</form>
+</section>
+
+<svg xmlns="http://www.w3.org/2000/svg" class="visuallyHidden" focusable="false" aria-hidden="true">
+	<defs>
+		<symbol id="icon--up" viewBox="0 0 14 14">
+			<path fill="none" stroke="currentColor" stroke-width="2" d="M.7 10.1L7 3.8l6.3 6.3"/>
+		</symbol>
+		<symbol id="icon--down" viewBox="0 0 14 14">
+			<path fill="none" stroke="currentColor" stroke-width="2" d="M.7 3.8L7 10.1l6.3-6.3"/>
+		</symbol>
+	</defs>
+</svg>
+	</body>
+	</html>

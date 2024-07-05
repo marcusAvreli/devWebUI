@@ -1,0 +1,65 @@
+$direction: left; // set left as default direction
+$oposite: right;
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+}
+
+.box {
+  padding: 2rem;
+}
+
+[dir="rtl"] {
+  $direction: right;
+  $oposite: left;
+
+  .form-group, button {
+    float: $direction;
+  }
+
+  input[type="checkbox"] {
+    margin-#{$oposite}: 20px;
+    margin-#{$direction}: 0;
+  }
+}
+
+.form-group {
+  width: 100%;
+  float: $direction;
+  display: block;
+  height: 50px;
+  position: relative;
+  padding: 12px 0 0 0;
+}
+
+button {
+  float: $direction;
+}
+
+label:not(.form-check-label) {
+  color: teal;
+  position: absolute;
+  top: 0;
+}
+
+label {
+  font-size: 11px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid teal;
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  margin-#{$oposite}: 20px;
+}

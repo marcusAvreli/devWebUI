@@ -1,0 +1,19 @@
+.parent-wrapper {
+    height:100%;
+  //  width:181px;
+    border: 1px solid black;
+}
+.parent {
+    display: flex;
+    font-size: 0;
+   // flex-wrap:wrap;
+  //  margin:-10px 0 0 -10px;
+}
+.child {
+    display: inline-block;
+    background:blue;
+   // margin:10px 0 0 10px;
+   // flex: 1;
+  //  height:100%;    
+    width: calc(100% * (1/4) - 10px - 1px)
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=
+  , initial-scale=1.0">
+  <title>My Contacts</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+
+  <header class="container">
+    <nav class="flex items-center">
+      <h2>Meus Contatos</h2>
+		<a href="https://github.com/Scarlosandre0/Scrollbar--My-Contacts-/tree/main"><h2>Source<h2></a>
+      <ul class="flex items-center">
+        <li>
+          <ion-icon name="add"></ion-icon>
+        </li>
+        <li>
+          <ion-icon name="pencil"></ion-icon>
+        </li>
+        <li>
+          <ion-icon name="trash"></ion-icon>
+        </li>
+      </ul>     
+    </nav>
+
+    <form>
+      <div class="input-wrapper flex items-center">
+        <label class="sr-only" for="filter">
+          Busque por nome ou dados de contato
+        </label>
+        <ion-icon name="search-outline"></ion-icon>
+        <input type="text"
+        id="filter" placeholder="Busque por nome ou por dados de contato...">
+      </div>
+    </form>
+  </header>
+
+
+  <section class="contacts container">
+    <div class="List-wrapper flex">
+      <div class="Letter purple">A</div>
+
+      <ul>
+        <li>
+          <div class="person flex">
+            <img src="img/Imagem do WhatsApp de 2023-04-26 à(s) 13.26.26.jpg" alt="">
+            <div class="contact">
+              <h3>André</h3>
+              <p>(11) 98876-1234</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="List-wrapper flex">
+      <div class="Letter green">D</div>
+
+      <ul>
+        <li>
+          <div class="person flex">
+            <img src="img/daniel.jpg" alt="">
+            <div class="contact">
+              <h3>Daniel Matuta</h3>
+              <p>(351) 333222111</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="person flex">
+            <img src="img/danilo.jpg" alt="">
+            <div class="contact">
+              <h3>Danillo Wilker</h3>
+              <p>(351) 888222555</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="List-wrapper flex">
+      <div class="Letter pink">M</div>
+
+      <ul>
+        <li>
+          <div class="person flex">
+            <img src="img/mae.jpg" alt="">
+            <div class="contact">
+              <h3>Mãe</h3>
+              <p>(84) 99688-3441</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="person flex">
+            <img src="img/clara.jpg" alt="">
+            <div class="contact">
+              <h3>Maria Clara</h3>
+              <p>(84) 98817-3441</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="List-wrapper flex">
+      <div class="Letter blue">T</div>
+
+      <ul>
+        <li>
+          <div class="person flex">
+            <img src="img/thiago.jpg" alt="">
+            <div class="contact">
+              <h3>Thiago Carvalho</h3>
+              <p>(84) 99927-3134</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

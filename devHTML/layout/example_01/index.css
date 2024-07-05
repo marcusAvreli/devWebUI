@@ -1,0 +1,42 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 75px;
+}
+.hor{
+	flex: auto;
+//  height: 100px;
+  border: 1px solid #c3c3c3;
+  display: flex;
+}
+.transfer {
+   
+	//width: 40%;
+	
+	
+    background-color: #FF0000;
+}
+
+.box:nth-of-type(1) ,
+.box:nth-of-type(3) {width:45%;
+ overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-gutter: stable;}
+.box:nth-of-type(2) {width:20%;}
+
+footer {
+ 
+  height: 25px;
+ 
+   
+}

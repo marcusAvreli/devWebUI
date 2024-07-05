@@ -1,0 +1,55 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+	
+}
+body {
+    display: flex;
+    flex-direction: column;
+	//direction:rtl;
+}
+/* an arbitrary container of fixed height */
+.fixed-container {
+	flex: auto;
+	display: flex;
+  height: 100px;
+  padding: 20px;
+  background-color: #0B5AB0;
+  color: white;
+}
+/* a container with flex-direction column */
+.main-container {
+	flex: auto;
+	display: flex;
+	border: 1px solid #c3c3c3;
+  
+	 
+}
+
+.box:nth-of-type(1) ,
+.box:nth-of-type(3) {width:45%; border: 1px solid #c3c3c3;}
+.box:nth-of-type(2){width:10%; border: 1px solid #c3c3c3;}
+
+/* this is the flex container that will take the rest of the height */
+.content-wrapper {
+ 
+  // display: flex;
+  flex: auto;
+  display: flex;
+ // min-height: 0px; /* IMPORTANT: you need this for non-chrome browsers */
+}
+/* the container for our overflowed content */
+.overflow-container {
+   flex: 1;
+  display: flex;
+  overflow: auto;
+  
+}
+.overflow-content {
+	   flex: 1;
+  display: flex;
+   height: 100px;
+    padding: 20px;
+}

@@ -1,0 +1,41 @@
+       *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .home-section {
+                display: flex;
+                border: 3px solid black;
+                height:100vh;
+                flex-flow: column;
+                max-height: 99vh;
+            }
+
+            .container {
+                flex: 1;
+                border: 3px solid red;
+                display: flex;
+                flex-direction: column;
+                height: fit-content;
+                max-height: 99vh;
+                overflow: auto;
+            }
+
+            #listItems {
+                border: 3px solid green;
+                height: 99vh;
+                overflow-y: auto;
+            }
+
+            #listItems > ul {
+                display: flex;
+                flex-flow: row wrap;
+                list-style: none;
+            }
+
+            .item {
+                border: 3px solid purple;
+                width: 200px;
+                height: 200px;
+                margin-left: 4px;
+            }

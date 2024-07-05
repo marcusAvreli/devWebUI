@@ -1,0 +1,135 @@
+<html>
+<head>
+<script>
+window.addEventListener('load',function(){
+	// Get the popup and overlay elements
+	var popup = document.getElementById("MyPopup");
+	var overlay = document.getElementById('ppOverlay');
+
+	// Get the close button element
+	var close = document.getElementById('btnpopclose');
+
+	// add javascript onclick event and function to display the popup
+	document.getElementById("showpopup").addEventListener("click",
+	function showpopup() { 
+		popup.style.display = 'block';
+		overlay.style.display = 'block';
+
+		// Add event listeners to close the popup
+		document.addEventListener('keydown', closePopupOnEscape);
+		overlay.addEventListener('click', closePopup);
+		close.addEventListener('click', closePopup);
+	});
+
+	// Function to close the popup
+	function closePopup() {
+		popup.style.display = 'none';
+		overlay.style.display = 'none';
+
+		// Remove event listeners during closing the popup
+		document.removeEventListener('keydown', closePopupOnEscape);
+		overlay.removeEventListener('click', closePopup);
+		close.removeEventListener('click', closePopup);
+	}
+
+	// Function to close the popup when the escape key is pressed
+	function closePopupOnEscape(event) {
+		if (event.keyCode === 27) {
+			closePopup();
+		}
+	}
+	
+});
+</script>
+<style>
+.popup {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50%;
+	background-color: #fff;
+	border: 0.0625rem solid #d3d3d3;
+	box-shadow: 0 0 0.625rem #e5e2e2;
+	border-radius: 0.625rem;
+	z-index: 999;
+	display: none;
+	height:400px;
+}
+
+@media screen and (max-width: 700px) {
+    .popup {
+        width: 90%;
+    }
+}
+
+.popup-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fff0;
+	z-index: 998;
+	display: none;
+}
+.popup-header {
+	background-color: #f3f3f3;
+	padding: 0.625rem;			
+}
+.popup-close {
+	font-size: 1.25rem;
+	font-weight: bold;
+	padding: 0.3125rem 0.625rem;
+	border-radius: 0.3125rem;
+	background-color: #f00;
+	color: #fff;
+	border: none;
+	float: right;
+	margin: -0.3125rem;
+}
+
+#showpopup {
+	background: #db0000;
+	border: 0;
+	padding: 0.625rem 1.5625rem 0.3125rem;
+	border-radius: 0.9375rem 0.9375rem;
+	font-size: 1rem;
+	font-weight: bold;
+	outline: none;
+	cursor: pointer;
+	vertical-align: top;
+    float: right;
+    color:#fff;
+}
+#showpopup:hover {
+	box-shadow: 0 0 5px gray;
+}
+
+</style>
+</head>
+
+<body>
+// popup button on the main page.
+<button id="showpopup">Show Popup</button>
+
+// popup child window section. This will be displayed when "Show popup" button is clicked.
+<div id="ppOverlay" class="popup-overlay"></div>
+
+<div id="MyPopup" class="popup">
+	<div class="popup-header">
+		<span style="font-weight:bold; padding-right:5px; padding-left:15px;">This is my popup heading: </span>
+		
+		<button id="btnpopclose" class="popup-close">×</button>
+	</div>
+	<div style="padding:15px;">
+		<h2>Popup Heading</h2>
+		<br>
+		<div>
+			This is a sample text...<br> second line
+		</div>
+	</div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+@keyframes progress {
+  from {
+    transform: scaleX(0);
+  }
+  
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.container {
+  width: 500px;
+}
+
+.progress {
+  animation: progress linear;
+  animation-timeline: scroll(root block);
+  height: 5px;
+  background: blue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  
+  /* Start the scale transform from the left edge */
+  transform-origin: right;
+}

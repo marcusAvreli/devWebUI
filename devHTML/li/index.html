@@ -1,0 +1,25 @@
+<style>
+    .clearfix {
+       *zoom: 1;
+    }
+    .clearfix:before,
+    .clearfix:after {
+        content: " ";
+        display: table;
+    }
+    .clearfix:after {
+        clear: both;
+    }
+    ul.list {
+       list-style: none;
+    }
+    ul.list li {
+       display: inline-block;
+    }
+</style>
+<ul class="list clearfix">
+    <li>li-one</li>
+    <li>li-two</li>
+    <li>li-three</li>
+    <li>li-four</li>
+</ul>
