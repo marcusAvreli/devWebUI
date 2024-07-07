@@ -2,6 +2,7 @@
 <html>
     <head>
  <!--
+ https://stackoverflow.com/questions/54522015/keep-flex-items-fixed-while-resizing-window
  //https://stackoverflow.com/questions/70043263/dont-allow-flex-container-to-stretch-beyond-screen-size
  -->
   <script src="index.js" defer></script>
@@ -18,7 +19,7 @@
       </div>
 	   <div class="scroll">
     <div class="scroll-bar" id="scroll-progress"></div>
-  </div>
+		</div>
       <div tabIndex="-1" id="body2">
 	 <div  class="contacts-wrapper">
 		  
@@ -97,12 +98,24 @@
 	<div class="contact">	contact1	</div>
 	</div>
 	    </div>
-	   <div id="footer2">       
-       actions
-      </div>
-	  <div id="footer2">       
-       status
-      </div>
+	  <div class="status-body">
+	   <div class="status-main-container">
+	   <div class="status-halfed-container">
+	    <div class="status-half-containers">
+		<div>
+<div class="btnBox">
+  <button type="button">Hello</button>
+</div>
+</div>
+         
+         </div>
+		 <div class="status-half-containers">
+         <button class="btn-two">Two</button>
+         
+         </div>
+	   </div>
+	   </div>
+	  </div>
     </div>
 
  </div>

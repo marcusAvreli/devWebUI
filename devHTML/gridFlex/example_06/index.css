@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.page {
+  height: 100%;
+  margin: 0;
+}
+.page2 {
+  height: 100%;
+  margin: 0;
+}
+/*.topbar {*/
+.left {
+	 grid-area: left;
+	  display: flex;
+  flex-flow: column nowrap;
+  overflow: auto;
+}
+
+
+/*.sidebar {*/
+	.transfer {
+  grid-area: transfer;
+  overflow-y: auto;
+  background-color: yellow;
+}
+
+/*.content {*/
+	.right {
+  grid-area: right;
+ 
+  background-color: lightblue;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: pink;
+}
+
+.contentsub {
+
+ flex-grow: 1;
+  margin: 1rem;
+  overflow-y: scroll;
+ 
+ 
+  background-color: orange;
+}
+
+
+.left-search{
+	grid-area: leftSearch;
+	  background-color: green;
+}
+
+.left-page-wrapper{
+	display: flex;
+	grid-column: 1 / 4; 
+	background-color: red;
+}
+
+.left-list{
+	
+	grid-area: leftList;		
+	display: flex;
+	flex:auto;
+	background-color: lightblue;
+}
+
+.left-paginator{
+	grid-area: leftPaginator;
+	display: flex;
+	
+	  background-color: blue;
+}
+.left-paginator-actions{
+		grid-area: actions;
+		display: flex;
+		grid-column: 1 / 3; 
+	flex:auto;
+	background-color: lightblue;
+}
+.left-paginator-status{
+	grid-area: statusbar;
+	display: flex;
+	flex:auto;
+	grid-column: 1 / 3; 
+	background-color: lightblue;
+}
+
+@media (min-width: 30rem) and (min-height: 30rem){
+  .page {
+    display: grid;
+    grid-template-areas: "left transfer right";
+    
+	grid-template-columns: 45% 10% 45%;
+  }
+   .left {
+    display: grid;
+    grid-template-areas: "leftSearch leftSearch leftSearch" "leftList leftList leftList" "leftPaginator leftPaginator leftPaginator" ;
+   
+	grid-template-rows: 6% 82% 12%;
+  }
+  .left-paginator {
+    display: grid;
+    grid-template-areas: "actions" "statusbar" ;
+   
+	grid-template-rows: 50% 50%;
+  }
+}
+

@@ -1,0 +1,71 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+	/*  border: 1px solid black;*/
+    /* box-sizing: border-box; */
+   /* -webkit-overflow-scrolling: touch;*/
+}
+body {
+    display: flex;
+    flex-direction: column;
+	//direction:rtl;
+}
+.main-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  /* min-height: 100vh; */
+  height: Calc(100vh - 46px);
+  border-bottom: 4px solid rgb(252, 143, 1);
+  /* border: 1px solid rgb(247, 247, 247) ; */
+  position: relative;
+  /* Added to allow absolute positioning inside the body */
+}
+
+.custom-header {
+  /* background-color: #333; */
+  background: linear-gradient(to bottom, #333 49px, transparent 49px);
+  /* border: 2px solid rgb(250, 9, 9) ; */
+  color: #fff;
+  padding: 10px;
+}
+
+.content {
+  flex: 1;
+  /* Take remaining available space between header and footer */
+  padding: 20px;
+  /* border: 4px solid rgb(2, 247, 63) ; */
+}
+
+/* your-component.scss */
+.ag-grid-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  height: 100%;
+}
+
+.header-content {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: flex-end; //Float items to the right */
+}
+
+/* .heading-title
+  {
+    justify-content: flex-start !important;
+  } */
+span {
+  padding: 5px;
+  background-color: #555;
+  margin: 5px;
+  white-space: nowrap;
+  /* Prevents items from wrapping to the next line */
+}
+
+table {
+  width: 100%;
+}

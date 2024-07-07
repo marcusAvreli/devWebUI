@@ -1,0 +1,134 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.wrapper {
+  /*
+  display: grid;
+  border-style: solid;
+  border-color: red;
+  border-width: 8px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+  width: 100vw;
+  height: 100vh;
+  
+  */
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  
+  display: grid;
+  grid-template-columns: 45% 10% 45%;
+  
+  
+  background-color: #fff;
+  
+  border: 8px solid red;
+  
+}
+
+
+.left {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  color: #9f9c9c;
+  text-transform: uppercase;
+  border-bottom: 2px solid #b0e0ea;
+ 
+//  display: flex;
+  
+  align-items: center;
+//  flex: auto;
+//	display: flex;
+//	border: 1px solid #c3c3c3;
+}
+.transfer {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  color: #9f9c9c;
+  text-transform: uppercase;
+  border-bottom: 2px solid #b0e0ea;
+ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.right {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  color: #9f9c9c;
+  text-transform: uppercase;
+  border-bottom: 2px solid #b0e0ea; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper-left {
+    display: grid;
+  grid-template-rows: 6% 82% 12%;
+  grid-template-columns: 100%;
+  
+ //  width: 100%;
+  // min-height: 100%;
+  
+  align-items: center;
+  
+  
+    /*display: flex;
+  flex-flow: column nowrap;
+  overflow: auto;
+  background-color: lightblue;
+  */
+}
+
+.search-bar {
+   
+grid-column: 1 / 2;
+  grid-row: 1 / 2;
+   min-height: 100%;
+}
+.left-list {
+ 
+
+    grid-column: 1 / 2;
+	 grid-row: 2 / 3;
+	 max-height: 100%;
+	 border: 8px solid green;
+	/*  box-sizing: border-box;
+	  display: flex;
+  flex-flow: column nowrap;
+  overflow: auto;
+  background-color: lightblue;
+  */
+
+}
+
+
+
+
+.contacts-wrapper{
+	//flex-grow: 1;
+ // margin: 1rem;
+  overflow-y: scroll;
+  max-height: 50%;
+  background-color: orange;
+ //  box-sizing: border-box;
+}
+
+.contact {
+	border: 1px solid #c3c3c3;
+	//width: 100px;
+	height: fit-content;
+	//margin-left: 4px;
+}
+
+.paginator {
+ // min-height: 100%;
+grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  
+}

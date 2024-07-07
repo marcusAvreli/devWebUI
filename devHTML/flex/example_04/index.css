@@ -1,0 +1,116 @@
+:root {
+  --color1: hsl(31, 77%, 52%);
+  --color2: hsl(184, 100%, 22%);
+  --color3: hsl(179, 100%, 13%);
+
+  --paragraphWhite: hsla(0, 0%, 100%, 0.75);
+  --headingsWhite: hsl(0, 0%, 95%);
+
+  --fontParagraph: "Lexend Deca", sans-serif;
+  --fontDisplay: "Big Shoulders Display", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: var(--fontParagraph);
+  background-color: var(--headingsWhite);
+  color: var(--paragraphWhite);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1020px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-radius: 0.5em;
+  margin: 2em;
+  overflow: hidden;
+  height: 450px;
+  max-width: 1020px;
+}
+
+ .wrapper > div{
+    display: flex;
+    flex-direction: column;
+} 
+
+.sedan,
+.suv,
+.luxury {
+  padding: 12% 15% 12% 15%;
+}
+
+.icon {
+  padding-bottom: 20px;
+}
+
+.title {
+  font-family: var(--fontDisplay);
+  color: var(--headingsWhite);
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+.text {
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.btnBox {
+    
+margin-block: auto 20px;
+ 
+}
+
+.button {
+  border: none;
+  width: 120px;
+  height: 35px;
+  border-radius: 1em;
+  
+}
+
+.sedan .button {
+  color: var(--color1);
+  
+}
+
+.suv .button {
+  color: var(--color2);
+}
+
+.luxury .button {
+  color: var(--color3);
+}
+.sedan {
+  background-color: var(--color1);
+}
+
+.suv {
+  background-color: var(--color2);
+}
+
+.luxury {
+  background-color: var(--color3);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

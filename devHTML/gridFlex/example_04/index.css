@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.page {
+  height: 100%;
+  margin: 0;
+}
+
+.topbar {
+  grid-area: header;
+  background-color: lightgreen;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  overflow-y: auto;
+  background-color: yellow;
+}
+
+.content {
+  grid-area: content;
+  display: flex;
+  flex-flow: column nowrap;
+  overflow: auto;
+  background-color: lightblue;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: pink;
+}
+
+.contentsub {
+  flex-grow: 1;
+  margin: 1rem;
+  overflow-y: scroll;
+  background-color: orange;
+}
+
+@media (min-width: 30rem) {
+  .page {
+    display: grid;
+    grid-template-areas: "header header" "sidebar content" "footer footer";
+    grid-template-columns: 1fr 9fr;
+  }
+}

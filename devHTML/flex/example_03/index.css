@@ -1,0 +1,41 @@
+html {
+  background-color: #141E30;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  overflow: auto;
+  background: #0a0c0f;
+  color: #EAE9E9;
+}
+
+.sidebar__profile {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar__menuitem {
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: 30px;
+}
+
+.count {
+  margin-left: auto;
+  margin-right: 20px;
+  border-radius: 6px;
+  padding: 2px 5px;
+  background-color: #EAE9E9;
+  color: #0a0c0f;
+}
