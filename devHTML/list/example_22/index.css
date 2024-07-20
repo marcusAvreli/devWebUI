@@ -1,0 +1,119 @@
+ /* FULL_SCREEN_OVERLAY_START */
+.container {
+	position: absolute;
+	width: 100%;	
+	left: 0;
+	top: 0;
+	background: rgba(51,51,51,0.7);
+	border-style: solid;
+	border-color: red;
+	border-width: 8px;
+	box-sizing: border-box;
+	display:flex;
+	height: 100vh;
+	//overflow:hidden;
+}
+/* FULL_SCREEN_OVERLAY_END */
+.page{
+	display: grid;
+	grid-template-areas: "left transfer right";
+	grid-template-columns: 45% 10% 45%;
+	border-style: solid;
+	border-color: red;
+	border-width: 2px;
+	box-sizing: border-box;
+	flex:auto;
+}
+
+.box1 {
+	grid-area: left;
+	border: 2px solid #ffa94d;
+  
+	/* SUB_GRID */	
+	overflow: auto;
+	display: grid;   
+	grid-template-areas: "leftSearch leftSearch leftSearch" "leftScroll leftScroll leftScroll" "leftList leftList leftList" "leftPaginator leftPaginator leftPaginator" ;   
+	grid-template-rows:  6% 1% 82% 11%;
+}
+
+.box2 {
+	grid-area: transfer;
+	border: 2px solid #ffa94d;
+}
+
+.box3 {
+	grid-area: right;
+	border: 2px solid #ffa94d;
+}
+
+/*SUB_GRID */
+.search{
+	grid-area: leftSearch;
+	background-color: green;
+}
+
+.wrapper-scroll{
+	grid-area: leftScroll;
+	background-color: black;	
+}
+
+.scroll {	
+	display: flex;	
+	background-color: lightgray;
+}
+
+.scroll-bar {
+    height: 4px;
+    background-color: black;
+}
+
+.wrapper-list{
+	height: 100%;
+	grid-area: leftList;
+	display: flex;
+	background-color: red;
+}
+
+.list{
+	display: flex;
+	flex:auto;
+	background-color: lightblue;
+}
+ 
+.contentsub {	
+	flex:auto;
+	overflow-y: scroll;
+	background-color: orange;
+} 
+
+
+.wrapper-paginator{
+	grid-area: leftPaginator;	
+	background-color: blue;
+}
+
+
+
+.paginator {
+	display: grid;
+	grid-template-areas: "actions" "statusbar" ;		
+	height:100%;
+	grid-template-rows: 50%;
+}
+
+
+.paginator-actions{
+	grid-area: actions;		
+	background-color: #f5ef42;
+	display:flex;
+}
+.paginator-status{
+	grid-area: statusbar;
+	display:flex;
+	background-color: #72f542;
+}
+
+.button1{
+	width:20%;
+	
+}
