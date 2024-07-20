@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+ 
 }
 
 html,
@@ -9,7 +10,7 @@ body,
   margin: 0;
 }
 .page2 {
-  height: 100%;
+ 
   margin: 0;
 }
 /*.topbar {*/
@@ -21,9 +22,6 @@ body,
 	  display: flex;
   flex-flow: column nowrap;
   overflow: auto;
-  
-  
-  
   
   
    display: grid;
@@ -69,61 +67,50 @@ body,
 }
 
 .left-page-wrapper{
-	 height: 100%;
-	grid-area: leftList;		
+	height: 100%;
+	grid-area: leftList;
 	display: flex;
 	grid-column: 1 / 4; 
 	background-color: red;
 }
 
 .left-list{
-	
-	
 	display: flex;
 	flex:auto;
 	background-color: lightblue;
 }
  
 .contentsub {
-
- flex-grow: 1;
-  margin: 1rem;
-  overflow-y: scroll;
- 
- 
-  background-color: orange;
+	flex-grow: 1;
+	margin: 1rem;
+	overflow-y: scroll;
+	background-color: orange;
 } 
  
  
 .paginator-wrapper{
 	grid-area: leftPaginator;
 	display: flex;
-	
-	  background-color: blue;
+	background-color: blue;
 }
 
 
 
 .paginator {
-    display: grid;
-    grid-template-areas: "actions" "statusbar" ;
-   
-	grid-template-rows: 50% 50%;
-  }
+	display: grid;
+	grid-template-areas: "actions" "statusbar" ;	
+	flex:auto;
+}
 
 
 .paginator-actions{
-		grid-area: actions;
-		//display: flex;
-		grid-column: 1 / 3; 
-	flex:auto;
+	grid-area: actions;		
 	background-color: #f5ef42;
+	display:flex;
 }
 .paginator-status{
 	grid-area: statusbar;
-	//display: flex;
-	flex:auto;
-	grid-column: 1 / 3; 
+	
 	background-color: #72f542;
 }
 .scroll {
@@ -133,6 +120,14 @@ body,
     background-color: lightgray;
 }
 
+.button1{
+	width:20%;
+	//flex:auto;
+}
+/*input{
+	width:20%;
+}
+*/
 #scroll-progress {
 
 

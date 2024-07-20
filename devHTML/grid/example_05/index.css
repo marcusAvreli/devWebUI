@@ -1,0 +1,36 @@
+*{
+  height:100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.wrapper {
+  display: grid;
+  grid-template-areas: "actions" "statusbar" ;
+  //grid-auto-rows: 100%;
+  grid-template-rows: 50% 50%;
+}
+
+.box1 {
+ grid-area: actions;
+}
+
+.box2 {
+ grid-area: statusbar;
+}
+
+
+
+.wrapper {
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.wrapper > div {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
+}
