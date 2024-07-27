@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- FULL_SCREEN -->
+	<!-- https://stackoverflow.com/questions/1719452/how-to-make-a-div-always-full-screen -->
+	<!-- https://stackoverflow.com/questions/72036460/full-page-with-nested-flexbox-and-scrolling -->	
+	<!-- X-UA-Compatible meta tag : override a user's "Compatibility View" settings in IE8, 9 and 10 for your website -->
+	<!-- This must be configured in the web site's server. -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<!-- Responsive Web Design - The Viewport -->
+	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="index.css" type='text/css'>
+	<script src="index.js" defer></script>
+</head>
+
+
+
+<body>
+	<div class="container">
+		<div class="page">
+			<div class="box1"> 
+			<div class="wrapper">
+<div class="circle progress-step-active">Step 1</div>
+	<div class="circle">Step 2</div>
+	<div class="circle">Step 3</div>
+	<div class="circle">Step 1</div>
+	<div class="circle">Step 2</div>
+
+	
+</div>
+			</div>
+			<div class="box2">
+			<div class="slides">
+			
+				 <div class="form-step form-step-active">
+				<h3>Your task location</h3>
+				<div class="input-group">
+					<input type="text" name="tasklocation" id="tasklocation" placeholder="Address"/>
+				</div>
+				<div class="input-group">
+					<input type="text" name="streetname" id="streetname" placeholder="Street name" />
+				</div>
+				
+				</div>
+				
+				   <!-- Form item - Social -->
+        <div class="form-step">
+            <h3>Task options</h3>
+            <div class="input-group taskoption">
+                <h3>How big is your task?</h3>
+                <label>
+                    <input type="radio" name="task-size" value="Small - Est. 1 hr" /> Small - Est. 1 hr
+                </label>
+                <label>
+                    <input type="radio" name="task-size" value="Medium - Est. 2-3 hrs" /> Medium - Est. 2-3 hrs
+                </label>
+                <label>
+                    <input type="radio" name="task-size" value="Large - Est. 4+ hrs" /> Large - Est. 4+ hrs
+                </label>
+            </div>
+
+            
+        </div>
+				
+				<!-- end of slides -->
+        </div>
+			
+			<div class="actions">
+			
+			<button class="btn btn-prev">prev</button>
+			<button class="btn btn-next">next</button>	
+		
+			</div>
+			
+			</div>
+		</div>
+	</div>
+</body>
+</html>
