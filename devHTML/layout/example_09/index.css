@@ -1,0 +1,8 @@
+ *{margin:0;padding:0;}
+    .main_con{position:relative;margin:0 auto;width:960px;}
+    .head_con{position:fixed;top:0;width:960px;height:42px;background:#ff0;}
+    .col_con{padding:42px 0 0 0;}
+    .left_col{width:360px;margin: 0 15px 0 0;float:left;background: #f60;}
+    .right_col{position:relative;float:left;width:960px;background: #f00 url("image that looks like left column continued") repeat-y;}
+    .right_col_content{float:left;width:585px;}
+    .clr{clear:both;}

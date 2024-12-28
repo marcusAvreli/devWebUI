@@ -1,0 +1,16 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border:2px double;
+  height:100vh;
+}
+
+.grid-item:nth-child(2) {
+ grid-column: 2 bar; /* The second `bar` named line which is the third line */
+
+  /* This is equivalent to */
+  grid-column-start: 2 bar;  
+  grid-column-end: auto;  
+  border:12px double;
+  height:50vh;
+}
